@@ -4,15 +4,23 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pipenv-to-requirements = "*"
-pipenv = "*"
 pytest = "*"
-pytest-mypy = "*"
-mypy = "*"
+pytest-flakes = "*"
+pytest-isort = "*"
+pytest-cov = "*"
 pytest-pycodestyle = "*"
+mypy = "*"
+pipenv-to-requirements = "*"
+black = "==20.8b1"
+flake8 = "*"
+isort = "*"
+pre-commit = "*"
+autopep8 = "*"
+typing-extensions = "*"
+coverage = "*"
 
 [packages]
 injector = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"

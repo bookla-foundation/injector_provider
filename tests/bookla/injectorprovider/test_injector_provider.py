@@ -1,14 +1,14 @@
 from unittest.mock import patch
 from injector import Injector, Module
-from injector_provider.providers import InjectorProvider
+from bookla.injectorprovider.providers import InjectorProvider
 
 
-class TestObjectGraphBuilder:
+class TestInjectorProvider:
     def test_can_build_without_any_configurations(self):
         provider = InjectorProvider()
         assert isinstance(provider.get_injector(), Injector)
 
-    @patch('injector_provider.providers.Injector.__init__')
+    @patch('bookla.injectorprovider.providers.Injector.__init__')
     def test_add_class(self, mocked_injector_init):
         mocked_injector_init.return_value = None
         provider = InjectorProvider()
